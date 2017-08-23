@@ -50,5 +50,11 @@ function nickelValue(day){
         return (dayValue + nickelValue(day-1));
     }
 }
-
 console.log(nickelValue(365));
+
+const appendValue = function(){
+    document.getElementById('answer_box').value = "";
+    day = document.getElementById('inputValue').value;
+    day = parseInt(day);
+    document.getElementById('answer_box').value = nickelValue(day);
+};
